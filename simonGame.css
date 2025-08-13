@@ -1,0 +1,117 @@
+body {
+    text-align: center;
+    text-align: center;
+    font-family: 'Trebuchet MS', sans-serif;
+    background: linear-gradient(135deg, #1f1f1f, #3a3a3a);
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.btn {
+    height: 150px; 
+    width: 150px;
+    border-radius: 20%;
+    border: 8px solid #222;
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+/* Layout for game board */
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.lineOne, .lineTwo {
+    display: flex;
+}
+
+#startBtn {
+    background: linear-gradient(45deg, #4CAF50, #45a049);
+    color: white;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+
+}
+
+/* Hover effect for desktop */
+#startBtn:hover {
+    background: linear-gradient(45deg, #45a049, #3e8e41);
+    transform: scale(1.05);
+}
+
+/* Active (click) effect */
+#startBtn:active {
+    transform: scale(0.98);
+}
+
+/* 💡 Glow animation */
+@keyframes glowPulse {
+    0% { box-shadow: 0 0 15px rgba(0, 255, 136, 0.8), 0 0 30px rgba(0, 255, 136, 0.5); }
+    50% { box-shadow: 0 0 25px rgba(0, 255, 136, 1), 0 0 50px rgba(0, 255, 136, 0.7); }
+    100% { box-shadow: 0 0 15px rgba(0, 255, 136, 0.8), 0 0 30px rgba(0, 255, 136, 0.5); }
+}
+.btn:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
+
+/* Colors */
+.red { background-color: #d95980; }
+.yellow { background-color: #f99b45; }
+.green { background-color: #63aac0; }
+.purple { background-color: #819ff9; }
+
+/* Flash animations */
+.flash {
+    background-color: white !important;
+    transform: scale(1.05);
+    box-shadow: 0 0 25px white;
+}
+
+.userflash {
+    background-color: lime !important;
+    transform: scale(1.05);
+    box-shadow: 0 0 25px lime;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .btn {
+        height: 120px;
+        width: 120px;
+        font-size: 1rem;
+        margin: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn {
+        height: 90px;
+        width: 90px;
+        font-size: 0.9rem;
+        margin: 0.3rem;
+    }
+}
+
+/* Mobile-friendly adjustments */
+@media (max-width: 600px) {
+    #startBtn {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}
