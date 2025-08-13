@@ -23,7 +23,7 @@ startBtn.addEventListener("click", function () {
     if (!started) {
         console.log("Game started");
         started = true;
-        level = 0;
+        level = 0; 
         gameSeq = [];
         levelUp();
     }
